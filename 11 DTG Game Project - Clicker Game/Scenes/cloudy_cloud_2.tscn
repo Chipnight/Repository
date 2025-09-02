@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ahe7o4g80vm"]
+
+[ext_resource type="Texture2D" uid="uid://cxxtt7tvvs1ss" path="res://Assets/Cloud-2.png.png" id="1_arhxr"]
+
+[node name="Cloudy-Cloud2" type="Sprite2D"]
+texture = ExtResource("1_arhxr")

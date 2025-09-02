@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfcsqomoh20wx"]
+
+[ext_resource type="FontFile" uid="uid://dbt0kw50irm1p" path="res://Assets/Fredoka-Bold.ttf" id="1_oadt6"]
+[ext_resource type="Script" uid="uid://brvqpbrlte0os" path="res://Scripts/coin_label.gd" id="2_bghy4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8aj6d"]
+bg_color = Color(0.803922, 0.560784, 0.282353, 1)
+
+[node name="Inside_House" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8aj6d")
+
+[node name="shop_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -141.0
+offset_top = 37.0
+offset_right = 141.0
+offset_bottom = 134.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_oadt6")
+theme_override_font_sizes/font_size = 80
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="coin_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 288.0
+offset_top = -1.0
+offset_right = 570.0
+offset_bottom = 96.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_oadt6")
+theme_override_font_sizes/font_size = 60
+text = "Coins: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_bghy4")

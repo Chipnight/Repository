@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://5nobx8y2qqq0"]
+
+[ext_resource type="Texture2D" uid="uid://bum12n3rfanom" path="res://Assets/House_Door1.png" id="1_otavv"]
+[ext_resource type="Script" uid="uid://defjl18fkl27f" path="res://Scripts/house_door.gd" id="2_asj6m"]
+
+[node name="HouseDoor" type="Sprite2D"]
+z_index = 1
+position = Vector2(51, 0)
+texture = ExtResource("1_otavv")
+script = ExtResource("2_asj6m")

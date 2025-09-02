@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjw4fnceja1rq"]
+
+[ext_resource type="Texture2D" uid="uid://d2e0jyhp7tear" path="res://Assets/House_No_Door-1.png.png" id="1_6pn4h"]
+
+[node name="Housey-House" type="Sprite2D"]
+texture = ExtResource("1_6pn4h")
