@@ -13,19 +13,11 @@ func _process(delta: float) -> void:
 
 
 func _on_new_characters_character_1() -> void:
-	var num = rng.randi_range(1, 2)
-	if num == 1:
-		play("Character1_Animation")
-	if num == 2:
-		play("Character1_Animation2")
-	
+	play("Character1_Animation")
 
+	
 func _on_new_characters_character_2() -> void:
-	var num = rng.randi_range(1, 2)
-	if num == 1:
-		play("Character2_Animation")
-	if num == 2:
-		play("Character2_Animation2")
+	play("Character2_Animation")
 
 func _on_new_characters_character_3() -> void:
 	play("Character3_Animation1")

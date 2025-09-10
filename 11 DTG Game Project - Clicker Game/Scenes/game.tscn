@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://crf652xjwxr6x"]
+[gd_scene load_steps=83 format=3 uid="uid://crf652xjwxr6x"]
 
 [ext_resource type="Script" uid="uid://cc5xcubm352dr" path="res://Scripts/game.gd" id="1_qxrlw"]
 [ext_resource type="Script" uid="uid://vytu58ppsgin" path="res://Scripts/right_panel.gd" id="2_ewbju"]
@@ -260,7 +260,7 @@ tracks/1/path = NodePath(".:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.0666667),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(300, 300)]
@@ -272,7 +272,7 @@ tracks/2/path = NodePath(".:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.0666667),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
@@ -288,6 +288,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(146, 147)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_o5yvi"]
@@ -487,7 +499,7 @@ particle_flag_disable_z = true
 spread = 180.0
 initial_velocity_min = 50.0
 initial_velocity_max = 80.0
-gravity = Vector3(0, 500, 0)
+gravity = Vector3(0, 1200, 0)
 scale_min = 15.0
 scale_max = 15.0
 scale_curve = SubResource("CurveTexture_mucmn")
@@ -516,7 +528,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 1.42, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-90.8155, -160.702), Vector2(-85.8099, -268.852), Vector2(-85.8099, -268.852), Vector2(-90.8155, -151.562)]
+"values": [Vector2(-90.8155, -160.702), Vector2(-85.8099, -268.852), Vector2(-85.8099, -268.852), Vector2(-431.195, -288.654)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -566,6 +578,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../+1clickpersecond:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.36, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.6, 0.6)]
+}
 
 [sub_resource type="Animation" id="Animation_7t8sx"]
 resource_name = "+1Click_Animation"
@@ -580,7 +604,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.25, 1.54, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-34.2151, -216.291), Vector2(-34.2151, -272.651), Vector2(-34.215, -271), Vector2(-34.2151, -208.675)]
+"values": [Vector2(-34.2151, -216.291), Vector2(-34.2151, -272.651), Vector2(-34.215, -271), Vector2(-381.139, -309.218)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -625,7 +649,7 @@ tracks/4/path = NodePath(".:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.11, 2.5),
+"times": PackedFloat32Array(0, 2.33333, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -633,7 +657,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_lmoi6"]
 resource_name = "Critical_Hit_Animation"
-length = 11.0
+length = 3.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -665,10 +689,10 @@ tracks/2/path = NodePath("../critical_hit:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.84, 2.05, 3.01, 10, 10.9333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.84, 2.05, 3.06, 10.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-64.3574, -166.033), Vector2(-65.7876, -260.474), Vector2(-65.7876, -260.474), Vector2(28.6033, -357.2), Vector2(28.6033, -357.2), Vector2(-64.3574, -144.708)]
+"values": [Vector2(-64.3574, -166.033), Vector2(-65.7876, -260.474), Vector2(-65.7876, -260.474), Vector2(-68.6479, -173.649), Vector2(-64.3574, -144.708)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -689,10 +713,10 @@ tracks/4/path = NodePath("../critical_hit:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.01, 1.23333, 1.81, 1.93333, 2.07, 2.5, 3, 4, 5, 6, 7, 8, 9, 10),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.01, 1.23333, 1.81, 1.93333, 2.07, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0, 0.174533, -0.174533, 0.0, 0.0, 3.14159, 0.0, -0.0523599, 0.0523599, -0.0523599, 0.0523599, -0.0523599, 0.0523599, 0.0]
+"values": [0.0, 0.0, 0.174533, -0.174533, 0.0, 0.0, -0.0523599, 0.0523599, -0.0523599, 0.0523599, -0.0523599, 0.0523599, 0.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -701,7 +725,7 @@ tracks/5/path = NodePath("../critical_hit:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 9.16667, 9.5, 10),
+"times": PackedFloat32Array(0, 3.16667, 6.16667, 10),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.52549), Color(1, 1, 1, 0)]
@@ -853,6 +877,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../+1clickpersecond:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vm72l"]
 _data = {
@@ -864,7 +900,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_85qyi"]
 resource_name = "Unbox_Character"
-length = 3.0
+length = 2.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -872,10 +908,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
+"times": PackedFloat32Array(0, 1.5, 2.56667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(359, 347), Vector2(660, 154), Vector2(1254, -3.99998)]
+"values": [Vector2(359, 347), Vector2(660, 154), Vector2(261, 115)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -884,43 +920,39 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
+"times": PackedFloat32Array(0, 1.5, 2.53333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 3.14159, 0.0]
 }
-
-[sub_resource type="Animation" id="Animation_7nbq1"]
-resource_name = "Character1_Animation2"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.96667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(359, 347), Vector2(-92, 262)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.866667, 1.96667),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.48, 2.53333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 3.14159, 0.0]
+"values": [Vector2(5, 5), Vector2(5, 5), Vector2(2.2, 2.2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.45, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vm72l"]
 resource_name = "Character2_Animation"
-length = 2.0
+length = 2.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -928,10 +960,10 @@ tracks/0/path = NodePath("../character2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.86667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.26, 2.46667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(359, 346), Vector2(-143, 288)]
+"values": [Vector2(359, 346), Vector2(677, 186), Vector2(247, 150)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -940,38 +972,34 @@ tracks/1/path = NodePath("../character2:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.86667),
+"times": PackedFloat32Array(0, 0.8, 2.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, -3.14159, 0.0]
 }
-
-[sub_resource type="Animation" id="Animation_22asu"]
-resource_name = "Character2_Animation2"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../character2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../character2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.82, 2.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(359, 346), Vector2(681, 224), Vector2(904, -121)]
+"values": [Vector2(5, 5), Vector2(5, 5), Vector2(2.2, 2.2)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../character2:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../character2:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.45, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 3.14159, 0.0]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_6uxt2"]
@@ -1124,24 +1152,71 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../character2:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../character2:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7nbq1"]
 _data = {
 &"Character1_Animation": SubResource("Animation_85qyi"),
-&"Character1_Animation2": SubResource("Animation_7nbq1"),
 &"Character2_Animation": SubResource("Animation_vm72l"),
-&"Character2_Animation2": SubResource("Animation_22asu"),
 &"Character3_Animation1": SubResource("Animation_6uxt2"),
 &"RESET": SubResource("Animation_iivbl")
 }
 
 [sub_resource type="GDScript" id="GDScript_xe308"]
 script/source = "extends Node
+@onready var sprite_2d: Sprite2D = $CookieLabel3/Sprite2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -1289,6 +1364,154 @@ tracks/1/keys = {
 "values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ym3tv"]
+resource_name = "Mail_Reset"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CookieLabel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CookieLabel3:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CookieLabel2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6a4tp"]
+resource_name = "Per_Click_Character_Reset"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CookieLabel3/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.2, 2.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CookieLabel3/Sprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+
+[sub_resource type="Animation" id="Animation_bwj6o"]
+resource_name = "Per_Click_Pop"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CookieLabel3:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(311, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CookieLabel3:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CookieLabel3/Sprite2D:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f3c8l"]
+resource_name = "Per_Second_Pop"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CookieLabel2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CookieLabel2:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(309, 18)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CookieLabel2/Sprite2D:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_oeip8"]
 length = 0.001
 tracks/0/type = "value"
@@ -1327,6 +1550,58 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CookieLabel3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CookieLabel2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_bu0y5"]
+resource_name = "Per_Sec_Character_Reset"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CookieLabel2/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.2, 2.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CookieLabel2/Sprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.592157)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d3cha"]
 _data = {
@@ -1334,6 +1609,11 @@ _data = {
 &"Coins_Shake2": SubResource("Animation_xe308"),
 &"Critical_Hit1": SubResource("Animation_d3cha"),
 &"Critical_Hit2": SubResource("Animation_i26dy"),
+&"Mail_Reset": SubResource("Animation_ym3tv"),
+&"Per_Click_Character_Reset": SubResource("Animation_6a4tp"),
+&"Per_Click_Pop": SubResource("Animation_bwj6o"),
+&"Per_Sec_Character_Reset": SubResource("Animation_bu0y5"),
+&"Per_Second_Pop": SubResource("Animation_f3c8l"),
 &"RESET": SubResource("Animation_oeip8")
 }
 
@@ -1406,9 +1686,9 @@ vertical_alignment = 1
 z_index = 1
 layout_mode = 0
 offset_left = 147.0
-offset_top = 167.0
+offset_top = 174.0
 offset_right = 566.0
-offset_bottom = 194.0
+offset_bottom = 201.0
 scale = Vector2(1.1, 1.1)
 pivot_offset = Vector2(213, 15)
 theme_override_styles/background = SubResource("StyleBoxFlat_v158k")
@@ -1466,7 +1746,7 @@ position = Vector2(136, 104)
 scale = Vector2(4, 4)
 emitting = false
 amount = 30
-lifetime = 0.8
+lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_8m3t6")
@@ -1535,7 +1815,8 @@ theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("16_7nbq1")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_8m3t6")
-text = "Piercing Strike"
+text = "Critical Hit"
+horizontal_alignment = 1
 script = ExtResource("21_mucmn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HouseDoor"]
@@ -1549,6 +1830,7 @@ script = ExtResource("18_7t8sx")
 script = ExtResource("16_85qyi")
 
 [node name="character1" type="Sprite2D" parent="new_characters"]
+self_modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 position = Vector2(660, 154)
@@ -1591,15 +1873,15 @@ position = Vector2(576, 325)
 script = SubResource("GDScript_xe308")
 
 [node name="CookieLabel" type="Label" parent="Stats"]
-offset_left = 34.0
-offset_top = 58.0
-offset_right = 661.0
+offset_left = 40.0
+offset_top = 46.0
+offset_right = 667.0
 offset_bottom = 107.0
 rotation = 0.0523599
 pivot_offset = Vector2(318, 28)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("4_3dryh")
-theme_override_font_sizes/font_size = 40
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("16_7nbq1")
+theme_override_font_sizes/font_size = 50
 text = "Mail: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1610,6 +1892,8 @@ offset_left = 33.0
 offset_top = 135.0
 offset_right = 660.0
 offset_bottom = 166.0
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(309, 18)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("4_wowpa")
 theme_override_font_sizes/font_size = 25
@@ -1619,15 +1903,18 @@ vertical_alignment = 1
 script = ExtResource("9_ese38")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stats/CookieLabel2"]
-position = Vector2(221, -15)
-scale = Vector2(0.1, 0.094)
-texture = ExtResource("9_tgy6u")
+texture_filter = 1
+position = Vector2(214, 14.6667)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("22_mg4q0")
 
 [node name="CookieLabel3" type="Label" parent="Stats"]
 offset_left = 33.0
 offset_top = 105.0
 offset_right = 660.0
 offset_bottom = 136.0
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(311, 20)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("16_7nbq1")
 theme_override_font_sizes/font_size = 25
@@ -1636,14 +1923,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("32_oeip8")
 
+[node name="Sprite2D" type="Sprite2D" parent="Stats/CookieLabel3"]
+self_modulate = Color(1, 1, 1, 0.501961)
+texture_filter = 1
+position = Vector2(228, 10)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("13_1phco")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Stats"]
 libraries = {
 &"": SubResource("AnimationLibrary_d3cha")
 }
+autoplay = "Mail_Reset"
 script = ExtResource("9_cwurv")
 
-[connection signal="cookies_changed" from="." to="Stats/CookieLabel" method="_on_game_cookies_changed"]
 [connection signal="cookies_changed" from="." to="Stats" method="_on_game_cookies_changed"]
+[connection signal="cookies_changed" from="." to="Stats/CookieLabel" method="_on_game_cookies_changed"]
 [connection signal="critical_hit" from="." to="ClickButton/AnimationPlayer" method="_on_game_critical_hit"]
 [connection signal="full" from="ProgressBar" to="ClickButton" method="_on_progress_bar_full"]
 [connection signal="full" from="ProgressBar" to="ClickButton/AnimationPlayer" method="_on_progress_bar_full"]
@@ -1651,9 +1946,9 @@ script = ExtResource("9_cwurv")
 [connection signal="ready" from="ProgressBar/AnimationPlayer" to="LeftPanel/MarginContainer" method="_on_animation_player_ready"]
 [connection signal="button_down" from="ClickButton" to="." method="_on_click_button_button_down"]
 [connection signal="button_down" from="ClickButton" to="ProgressBar/AnimationPlayer" method="_on_click_button_button_down"]
-[connection signal="button_down" from="ClickButton" to="Stats/AnimationPlayer" method="_on_click_button_button_down"]
 [connection signal="button_down" from="ClickButton" to="ClickButton" method="_on_button_down"]
 [connection signal="button_down" from="ClickButton" to="ClickButton/AnimationPlayer" method="_on_click_button_button_down"]
+[connection signal="button_down" from="ClickButton" to="Stats/AnimationPlayer" method="_on_click_button_button_down"]
 [connection signal="button_up" from="ClickButton" to="LeftPanel/MarginContainer" method="_on_click_button_button_up"]
 [connection signal="button_up" from="ClickButton" to="ProgressBar" method="_on_click_button_button_up"]
 [connection signal="button_up" from="ClickButton" to="ClickButton" method="_on_button_up"]
@@ -1668,16 +1963,19 @@ script = ExtResource("9_cwurv")
 [connection signal="character1" from="new_characters" to="new_characters/character1" method="_on_new_characters_character_1"]
 [connection signal="character1" from="new_characters" to="new_characters/character_animation" method="_on_new_characters_character_1"]
 [connection signal="character1" from="new_characters" to="Stats/CookieLabel3" method="_on_new_characters_character_1"]
-[connection signal="character2" from="new_characters" to="Stats/CookieLabel2" method="_on_new_characters_character_2"]
+[connection signal="character1" from="new_characters" to="Stats/AnimationPlayer" method="_on_new_characters_character_1"]
 [connection signal="character2" from="new_characters" to="HouseDoor/+1clickpersecond" method="_on_new_characters_character_2"]
 [connection signal="character2" from="new_characters" to="HouseDoor/AnimationPlayer" method="_on_new_characters_character_2"]
 [connection signal="character2" from="new_characters" to="new_characters/character2" method="_on_new_characters_character_2"]
 [connection signal="character2" from="new_characters" to="new_characters/character_animation" method="_on_new_characters_character_2"]
 [connection signal="character2" from="new_characters" to="Stats" method="_on_new_characters_character_2"]
+[connection signal="character2" from="new_characters" to="Stats/CookieLabel2" method="_on_new_characters_character_2"]
+[connection signal="character2" from="new_characters" to="Stats/AnimationPlayer" method="_on_new_characters_character_2"]
 [connection signal="character3" from="new_characters" to="HouseDoor/critical_hit" method="_on_new_characters_character_3"]
 [connection signal="character3" from="new_characters" to="HouseDoor/AnimationPlayer" method="_on_new_characters_character_3"]
 [connection signal="character3" from="new_characters" to="new_characters/character3" method="_on_new_characters_character_3"]
 [connection signal="character3" from="new_characters" to="new_characters/character_animation" method="_on_new_characters_character_3"]
+[connection signal="character3" from="new_characters" to="Stats/AnimationPlayer" method="_on_new_characters_character_3"]
 [connection signal="amount_per_click_increase" from="new_characters/character1" to="." method="_on_character_1_amount_per_click_increase"]
 [connection signal="Auto_amount_increase" from="new_characters/character2" to="." method="_on_character_2_auto_amount_increase"]
 [connection signal="Critial_Hits_10_Seconds" from="new_characters/character3" to="." method="_on_character_3_critial_hits_10_seconds"]

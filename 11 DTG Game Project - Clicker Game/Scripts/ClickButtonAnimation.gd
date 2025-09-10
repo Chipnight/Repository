@@ -18,7 +18,7 @@ func _on_click_button_button_down() -> void:
 	if critical == true:
 		progress_bar.value += 15
 		var tween = get_tree().create_tween()
-		tween.tween_property(click_button, "scale", Vector2(.75, .75), .1)
+		tween.tween_property(click_button, "scale", Vector2(.75, .75), .05)
 		var num = rng.randi_range(0, 1)
 		if num == 0:
 			play("Critical_Hit")
@@ -27,9 +27,9 @@ func _on_click_button_button_down() -> void:
 			play("Critical_Hit1")
 			sfx_click_2.play()
 	else:
-		progress_bar.value += 10
+		progress_bar.value += 20
 		var tween = get_tree().create_tween()
-		tween.tween_property(click_button, "scale", Vector2(.8, .8), .1)
+		tween.tween_property(click_button, "scale", Vector2(.8, .8), .05)
 		var num = rng.randi_range(0, 1)
 		if num == 0:
 			play("Button_Shake1")

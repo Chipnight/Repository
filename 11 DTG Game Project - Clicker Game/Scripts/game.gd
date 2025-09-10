@@ -14,12 +14,13 @@ signal critical_hit
 signal cookies_changed
 
 func _on_click_button_button_down() -> void:
+	$Camera.screen_shake(8, 0.5)
 	cookies += amount_per_click
 	if critical == true:
 		cookies += critical_bonus
+		$Camera.screen_shake(20, 0.3)
 	emit_signal("cookies_changed", cookies)
-	if critical == true:
-		$Camera.screen_shake(8, 0.5)
+		
 
 func _on_character_1_amount_per_click_increase() -> void:
 	amount_per_click = amount_per_click + 1
